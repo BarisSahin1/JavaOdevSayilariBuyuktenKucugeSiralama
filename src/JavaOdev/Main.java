@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int sayi1,sayi2,sayi3,maks=0;
+        int sayi1,sayi2,sayi3,min=0;
         System.out.println("Siralamak istediginiz 3 degeri giriniz.");
 
 
@@ -15,21 +15,21 @@ public class Main {
         sayi2 = scanner.nextInt();
         sayi3 = scanner.nextInt();
 
-        if(sayi1>sayi2){
-            maks=sayi1;
+        if(sayi1<sayi2){
+            min=sayi1;
 
-            if (sayi1>sayi3){
-                maks = sayi1;
+            if (sayi1<sayi3){
+                min = sayi1;
             }
-            else maks = sayi3;
+            else min = sayi3;
         }
-        else if (sayi2>sayi1){
-            if (sayi2>sayi3){
-                maks = sayi2;
+        else if (sayi2<sayi1){
+            if (sayi2<sayi3){
+                min = sayi2;
             }
-            else maks = sayi3;
+            else min = sayi3;
         }
 
-        System.out.println("Maks deger : " + maks);
+        System.out.println("Min deger : " + min);
     }
 }
